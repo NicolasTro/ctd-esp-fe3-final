@@ -14,7 +14,8 @@ const Detail = ( {dentist} ) => {
             <th>Name</th>
             <th>E-mail</th>
             <th>Phone</th>
-            <th>Website</th>
+            
+            <th>Website</th> 
           </tr>
         </thead>
         <tbody>
