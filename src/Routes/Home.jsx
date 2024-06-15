@@ -13,12 +13,12 @@ const Home = () => {
 
 
 const {state, dispatch} = useContextGlobalDentist()
+console.log(state);
+// useEffect(()=>{
 
-useEffect(()=>{
+//   console.log(state);
 
-  console.log(state);
-
-},[])
+// },[])
 
 
 
@@ -29,6 +29,7 @@ useEffect(()=>{
       <div className='card-grid'>
         {/* <h2>asdasda</h2> */}
         {state.data.map((dentista, index)=> (<Card key={index} name={dentista.name} username={dentista.username} id={dentista.id}/>) )}
+        
         {/* Aqui deberias renderizar las cards */}
       </div>
     </main>

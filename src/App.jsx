@@ -16,6 +16,7 @@ function App() {
 				<Route path={routes.Favs} element={<Favs />} />
 				<Route path={routes.Details} element={<Detail />} />
 				<Route path={routes.Contact} element={<Contact />} />
+				<Route path="/detail/:id" element={<Detail />} />
 				<Route path="/" element={<Navigate to={routes.Home} />} />
 				<Route path="*" element={<h1>Error 404 - Page not found</h1>} />
 			</Routes>
