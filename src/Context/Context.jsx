@@ -7,8 +7,10 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "GET_DENTISTS":
       return { ...state, data: action.payload };
-      case "DETAILS":
-        return {data: action.payload}
+    case "DETAILS":
+      return { data: action.payload };
+    case "FAVS":
+      return {};
   }
 };
 
@@ -17,8 +19,8 @@ const Context = ({ children }) => {
     theme: "",
     data: [],
     url: "https://jsonplaceholder.typicode.com/users",
+    favs: [],
   };
-
 
   const [state, dispatch] = useReducer(reducer, initialState);
 

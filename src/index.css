@@ -130,10 +130,49 @@ footer {
 .footerConteiner {
 	position: relative;
 	margin-top: 100px;
+	/* border: solid black 3px; */
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
 }
 
+.footerDown{
+	display: flex;
+	/* border: solid black 3px; */
+	justify-content: space-around;
+	align-items: center;
+	
+}
+
+
 .divisionFooter {
+	/* border: solid black 3px; */
 	background-color: #e1051f;
 	height: 50px;
 	width: 100vw;
 }
+.containerRedesSociales{
+display: flex;
+/* flex-direction: column; */
+
+/* background-color: black; */
+filter: invert(1);
+width: 20px;
+height: 20px;
+gap: 12px;
+
+
+
+}
+
+.containerDH{
+	display: flex;
+	/* border: solid black 3px; */
+	height: 100%;
+	align-items: center;
+}
+.containerDH img{
+height: 40px;
+}
+
+
