@@ -1,5 +1,5 @@
 body {
-	margin: 0;
+	margin: 0 auto;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -8,13 +8,21 @@ body {
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
 .favButton {
 	background-color: rgba(136, 136, 136, 0.116);
-	padding: 10px;
+	/* padding: 10px; */
 	border: none;
-	width: 100%;
+	width: 80%;
+	height: 12%;
 	cursor: pointer;
 }
+
+.favButton img {
+	width: 25px;
+	height: 25px;
+}
+
 
 h1 {
 	text-align: center;
@@ -22,9 +30,9 @@ h1 {
 
 nav {
 	display: flex;
-	width: 80vw;
-	justify-content: flex-start;
-	padding: 1rem;
+	width: 100%;
+	justify-content: space-evenly;
+	/* padding: 1rem; */
 }
 
 a {
@@ -33,6 +41,7 @@ a {
 	margin: 5px;
 	cursor: pointer;
 }
+
 a:hover {
 	color: rgb(136, 136, 136);
 }
@@ -41,7 +50,6 @@ footer {
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	/* padding: 2rem; */
 	position: relative;
 	bottom: 0;
 	width: 90%;
@@ -53,7 +61,8 @@ footer img {
 	width: 200px;
 	margin: 0;
 }
-footer > p {
+
+footer>p {
 	margin: 0;
 	padding-top: 0.7rem;
 }
@@ -63,18 +72,40 @@ form {
 	flex-direction: column;
 	justify-content: space-around;
 	width: 300px;
-	height: 100px;
+	height: 100%;
 	margin: 0 auto;
+	border: solid black 3px;
 }
+
+.validacion {
+	color: red;
+}
+
+
 
 .card {
 	display: flex;
 	justify-content: space-around;
 	flex-direction: column;
 	align-items: center;
-	width: 200px;
+	width: 20%;
 	padding: 0.5rem 0.5rem 0 0.5rem;
 	border: 0.5px solid rgb(136, 136, 136);
+	text-align: center;
+	
+	background-color: rgb(205, 202, 188);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+              0 8px 16px rgba(0, 0, 0, 0.2),
+              0 16px 32px rgba(0, 0, 0, 0.2),
+              0 32px 64px rgba(0, 0, 0, 0.2);
+}
+.card a img{
+	width: 80%;
+}
+
+.card h3{
+	margin-top: 5px;
+	font-size: 16px;
 }
 
 .card:hover {
@@ -90,6 +121,18 @@ form {
 	flex-wrap: wrap;
 	margin: 0 auto;
 }
+
+.card button{
+	height: 40px;
+	background-color: rgba(232, 222, 190, 0.794);
+	margin-bottom: 10px;
+}
+
+.card button:hover{
+	background-color: rgba(199, 183, 199, 0.794);
+	
+}
+
 
 table {
 	border-collapse: collapse;
@@ -110,11 +153,8 @@ tr:nth-child(even) {
 	background-color: #dddddd;
 }
 
-.dark {
-	background-color: #12121296;
-	color: white;
-}
-.dark > a {
+
+.dark>a {
 	color: white;
 }
 
@@ -125,54 +165,129 @@ tr:nth-child(even) {
 
 footer {
 	flex-direction: column;
+	width: 100%;
 }
 
 .footerConteiner {
 	position: relative;
 	margin-top: 100px;
-	/* border: solid black 3px; */
 	display: flex;
 	flex-direction: column;
-	width: 100vw;
 }
 
-.footerDown{
+.footerDown {
 	display: flex;
-	/* border: solid black 3px; */
 	justify-content: space-around;
 	align-items: center;
-	
+
 }
 
 
 .divisionFooter {
-	/* border: solid black 3px; */
 	background-color: #e1051f;
 	height: 50px;
-	width: 100vw;
-}
-.containerRedesSociales{
-display: flex;
-/* flex-direction: column; */
-
-/* background-color: black; */
-filter: invert(1);
-width: 20px;
-height: 20px;
-gap: 12px;
-
-
-
+	width: 100%;
 }
 
-.containerDH{
+.containerRedesSociales {
 	display: flex;
-	/* border: solid black 3px; */
+	filter: invert(1);
+	width: 20px;
+	height: 20px;
+	gap: 12px;
+}
+
+.containerDH {
+	display: flex;
 	height: 100%;
 	align-items: center;
 }
-.containerDH img{
-height: 40px;
+
+.containerDH img {
+	height: 40px;
+}
+ 
+
+.navBarDerecho {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navBarDerecho img {
+	width: 20px;
+	height: 20px;
+}
+
+.navbar-nav {
+	flex-direction: row;
+}
+
+.normal {
+	width: 100vw;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 8vh;
+	background-color: rgb(236, 236, 235);
+	
+}
+
+.fondoNormal{
+	animation: aclarar 1.5s forwards 
+
 }
 
 
+@keyframes aclarar{	
+	from{
+		background-color: #202428;
+	}to{		
+		background-color: rgb(232, 232, 232);		
+	}
+}
+
+
+
+
+.dark{
+	width: 100%;
+	animation: oscurecer 0.8s forwards 
+	
+}
+	
+	
+
+@keyframes oscurecer{	
+	from{
+		background-color: rgb(232, 232, 232);		
+	}to{		
+		background-color: #202428;
+	}
+}
+
+
+
+
+.darkFont{
+	color: white;
+	/* animation: oscurecer 1.5s forwards  */
+}
+
+.darkIco{
+	filter: invert(1);
+}
+
+.darkBack{
+	width: 100%;
+	animation: oscurecerFondo 0.8s ease-in-out 0.5s 1 forwards;
+}
+
+@keyframes oscurecerFondo{	
+	from{
+		background-color: rgb(232, 232, 232);		
+	}to{		
+		background-color: #737373;
+	}
+}

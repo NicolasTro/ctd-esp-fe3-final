@@ -1,23 +1,18 @@
 // import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
 import { BrowserRouter } from "react-router-dom";
-import Context from './Context/Context';
+import Context from "./Context/Context";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // <React.StrictMode>
-  <Context>
 
-    <BrowserRouter>
-
-      <App/>
-    
-    </BrowserRouter>
-  </Context>
+  <BrowserRouter>
+    <Context>
+      <App />
+    </Context>
+  </BrowserRouter>
   // </React.StrictMode>
 );
-
-

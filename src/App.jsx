@@ -6,10 +6,14 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import { routes } from "./utils/Routes";
 import {Routes, Route, Navigate} from "react-router-dom"
+import { useContextGlobalDentist } from "./Context/Context";
 
 function App() {
+
+	const {state} = useContextGlobalDentist()
+	const tema = state.theme 
 	return (
-		<div className="App">
+		<div className={`App ${tema==="dark"? "darkBack": ""}`}>
 			<Navbar />
 			<Routes>
 				<Route path={routes.Home} element={<Home />} />
