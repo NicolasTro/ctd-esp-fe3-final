@@ -8,13 +8,15 @@ const reducer = (state, action) => {
     case "GET_DENTISTS":
       return { ...state, data: action.payload };
     case "DETAILS":
-      return {...state, data: action.payload };
+      return { ...state, data: action.payload };
     case "ADD_FAVS":
-      return {...state, favs: [...state.favs, action.payload]};
-      case "CHANGE_THEME":
-        return {...state, theme: state.theme ==="normal"? "dark": "normal"}
-        case "REMOVE_FAV":
-          return { ...state, favs: state.favs.filter((fav) => fav.id !== action.payload) };
+      return { ...state, favs: [...state.favs, action.payload] };
+    case "CHANGE_THEME":
+      return { ...state, theme: state.theme === "normal" ? "dark" : "normal" }
+    case "REMOVE_FAV":
+      return { ...state, favs: state.favs.filter((fav) => fav.id !== action.payload) };
+    default:
+      throw new Error("Sucedio un error al modificar el estado");
   }
 };
 
@@ -31,7 +33,7 @@ const Context = ({ children }) => {
   useEffect(() => {
     axios(initialState.url)
       .then((res) => dispatch({ type: "GET_DENTISTS", payload: res.data }))
-      .catch((err) => console.log(err));
+      .catch((err) => alert(err));
   }, [dispatch]);
   //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
 

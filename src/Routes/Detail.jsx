@@ -26,7 +26,7 @@ const Detail = () => {
 		<>
 			<h1 className={tema==="dark"? "darkFont":"lightFont"}>Detail Dentist id </h1>
 			{!dentist ? (
-				<h2>No se encuentran dentistas</h2>
+				<h2 className={tema==="dark"? "darkFont":"lightFont"}>No se encuentran dentistas</h2>
 			) : (
 				<table >
 					<thead>

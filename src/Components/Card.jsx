@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useContextGlobalDentist } from "../Context/Context";
 
-const Card = ({ name, username, id }) => {
+const Card = ({ dentista }) => {
+  console.log(dentista);
+const{name, username, id} = dentista
   //Llamo al useContextGlobal
   const { state, dispatch } = useContextGlobalDentist();
   //A STATE LE PIDO EL THEME Y LO GUARDO EN UNA VARIABLE
@@ -15,7 +17,8 @@ const Card = ({ name, username, id }) => {
 
   const addFav = () => {
     //CREO UN FAVORITO PARA AGREGAR Y LO CARGO CON LOS DATOS DE LA CARD
-    const favoritoParaAgregar = { name, username, id };
+    // const favoritoParaAgregar = { name, username, id };
+    const favoritoParaAgregar = dentista;
     //PREGUNTO SI TENGO FAVORITOS ACTUALMENTE, SINO DEVUELVO UN ARRAY VACIO
     const favoritosActuales =
       JSON.parse(localStorage.getItem("favorites")) || [];

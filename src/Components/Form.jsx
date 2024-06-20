@@ -7,7 +7,7 @@ const Form = () => {
   const [emailOK, setEmailOK] = useState(false);
   const [mensajeOK, setMensajeOK] = useState(false);
   const [nombreContacto, setNombreContacto] = useState("");
-  const {state} = useContextGlobalDentist()
+  const { state } = useContextGlobalDentist()
   const tema = state.theme
 
   const [error, setError] = useState(false);
@@ -30,24 +30,28 @@ const Form = () => {
     }
   }, [nombreOK, emailOK]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     if (mensajeOK) {
       setMensaje(true);
       setTimeout(() => {
         setMensaje(false);
-      }, 2000); 
+      }, 2500);
     } else {
       setError(true);
       setTimeout(() => {
-        setMensaje(false);
-         setError(false);
-      }, 2000); 
+        setError(false);
+      }, 2000);
     }
   };
 
+  const validarEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+
   const handleEmail = (e) => {
-    if (e.target.value.length > 5) {
+    if (validarEmail(e.target.value)) {
       setEmailOK(true);
     } else {
       setEmailOK(false);
@@ -56,21 +60,21 @@ const Form = () => {
   return (
     <div>
       <form>
-        <label className={tema==="dark"? "darkFont":""}>Nombre completo:</label>
+        <label className={tema === "dark" ? "darkFont" : ""}>Nombre completo:</label>
         <input type="text" onChange={handleName}></input>
 
-        <label className={tema==="dark"? "darkFont":""}>Email:</label>
+        <label className={tema === "dark" ? "darkFont" : ""}>Email:</label>
         <input type="text" onChange={handleEmail}></input>
-        
-        <button type="button" className={`btn ${tema==="dark"? "btn-dark":"btn-light"}`} onClick={handleSubmit}>Send</button>
+
+        <button type="button" className={`btn ${tema === "dark" ? "btn-dark" : "btn-light"}`} onClick={handleSubmit}>Send</button>
 
       </form>
       {mensaje ? (
         <div>
           Gracias {nombreContacto}, te contactaremos cuanto antes via mail
         </div>
-      ) : error ? ( 
-        <h3 className="validacion">Verifique su informacion nuevamente</h3>      
+      ) : error ? (
+        <h3 className="validacion">Verifique su informacion nuevamente</h3>
       ) : (
         <></>
       )}

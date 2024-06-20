@@ -46,10 +46,6 @@ a:hover {
 }
 
 
-
-
-
-
 form {
 	display: flex;
 	flex-direction: column;
@@ -62,8 +58,6 @@ form {
 .validacion {
 	color: red;
 }
-
-
 
 .card {
 	display: flex;
@@ -88,7 +82,6 @@ form {
 .card h3{
 	margin-top: 5px;
 	font-size: 16px;
-	/* width: 100%; */
 }
 
 .card:hover {
@@ -140,9 +133,7 @@ tr:nth-child(even) {
 }
 
 
-
 /* ----------------------------------- */
-
 
 
 .navBarDerecho {
@@ -172,26 +163,6 @@ tr:nth-child(even) {
 	
 }
 
-
-
-
-
-
-
-
-/* .fuenteNormal{
-	animation: aclarar 1.8s ease-in-out 0s 1 forwards 
-
-}
-
-
-@keyframes aclarar{	
-	from{
-		color: rgb(232, 232, 232);		
-	}to{		
-		color: #202428;
-	}
-} */
 
 /* TRANSICION DE CLARO A OSCURO */
 
@@ -225,7 +196,6 @@ tr:nth-child(even) {
 @keyframes oscurecerFuentes{	
 	from{
 		color: black;
-		/* background-color: #737373; */
 	}to{		
 		color: rgb(232, 232, 232);		
 	}
@@ -233,7 +203,6 @@ tr:nth-child(even) {
 @keyframes aclararFuentes{	
 	from{
 		color: rgb(232, 232, 232);		
-		/* background-color: #737373; */
 	}to{		
 		color: black;
 	}
@@ -262,7 +231,6 @@ tr:nth-child(even) {
 
 @keyframes oscurecerFondo{	
 	from{
-		/* background-color: rgb(232, 232, 232);		 */
 		background-color: rgb(210, 230, 226);		
 	}to{		
 		background-color: #2a5966;
@@ -274,4 +242,7 @@ tr:nth-child(even) {
 	}to{		
 		background-color: rgb(210, 230, 226);		
 	}
+}
+.algo{
+	border: solid black 3px;
 }

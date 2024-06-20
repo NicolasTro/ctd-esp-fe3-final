@@ -1,8 +1,5 @@
-// import React from "react";
 import Card from "../Components/Card";
-
 import { useContextGlobalDentist } from "../Context/Context";
-
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Favs = () => {
@@ -15,12 +12,8 @@ const Favs = () => {
       <div className="card-grid">
         {favoritos.length > 0 ? (
           favoritos.map((fav, index) => (
-            <Card
-              key={index}
-              name={fav.name}
-              username={fav.username} // Asegúrate de ajustar según la estructura de tus favoritos
-              id={fav.id}
-            />
+            <Card dentista={fav} key={index} />
+            // Asegúrate de ajustar según la estructura de tus favoritos
           ))
         ) : (
           <h3 className={tema==="dark"? "darkFont": "lightFont"}>No favorites found</h3>
