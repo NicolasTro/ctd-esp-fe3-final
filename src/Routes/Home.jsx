@@ -8,26 +8,26 @@ import Card from "../Components/Card";
 
 const Home = () => {
   const { state, dispatch } = useContextGlobalDentist();
-const tema = state.theme
+  const tema = state.theme;
   return (
     <main className="">
-      <h1 className={tema==="dark"? "darkFont":""}>Home</h1>
+      <h1 className={tema === "dark" ? "darkFont" : "lightFont"}>Home</h1>
       <div className="card-grid">
         {state !== null ? (
           state.data.length > 0 ? (
             state.data.map((dentista, index) => (
               <Card
-                key={index}
+                key={dentista.id}
                 name={dentista.name}
                 username={dentista.username}
                 id={dentista.id}
               />
             ))
           ) : (
-            <h3>Dentists not found</h3>
+            <h3 className={tema === "dark" ? "darkFont" : "lightFont"}>Dentists not found</h3>
           )
         ) : (
-          <h3>Dentist not found</h3>
+          <h3 className={tema === "dark" ? "darkFont" : "lightFont"}>Dentist not found</h3>
         )}
 
         {/* Aqui deberias renderizar las cards */}

@@ -11,7 +11,6 @@ code {
 
 .favButton {
 	background-color: rgba(136, 136, 136, 0.116);
-	/* padding: 10px; */
 	border: none;
 	width: 80%;
 	height: 12%;
@@ -32,7 +31,7 @@ nav {
 	display: flex;
 	width: 100%;
 	justify-content: space-evenly;
-	/* padding: 1rem; */
+	font-size: 120%;
 }
 
 a {
@@ -46,26 +45,10 @@ a:hover {
 	color: rgb(136, 136, 136);
 }
 
-footer {
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	position: relative;
-	bottom: 0;
-	width: 90%;
-	height: 40px;
-	margin-top: 2rem;
-}
 
-footer img {
-	width: 200px;
-	margin: 0;
-}
 
-footer>p {
-	margin: 0;
-	padding-top: 0.7rem;
-}
+
+
 
 form {
 	display: flex;
@@ -74,7 +57,6 @@ form {
 	width: 300px;
 	height: 100%;
 	margin: 0 auto;
-	border: solid black 3px;
 }
 
 .validacion {
@@ -106,6 +88,7 @@ form {
 .card h3{
 	margin-top: 5px;
 	font-size: 16px;
+	/* width: 100%; */
 }
 
 .card:hover {
@@ -124,13 +107,11 @@ form {
 
 .card button{
 	height: 40px;
-	background-color: rgba(232, 222, 190, 0.794);
 	margin-bottom: 10px;
 }
 
 .card button:hover{
-	background-color: rgba(199, 183, 199, 0.794);
-	
+	background-color: rgba(50, 66, 70, 0.464);	
 }
 
 
@@ -163,50 +144,6 @@ tr:nth-child(even) {
 /* ----------------------------------- */
 
 
-footer {
-	flex-direction: column;
-	width: 100%;
-}
-
-.footerConteiner {
-	position: relative;
-	margin-top: 100px;
-	display: flex;
-	flex-direction: column;
-}
-
-.footerDown {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-
-}
-
-
-.divisionFooter {
-	background-color: #e1051f;
-	height: 50px;
-	width: 100%;
-}
-
-.containerRedesSociales {
-	display: flex;
-	filter: invert(1);
-	width: 20px;
-	height: 20px;
-	gap: 12px;
-}
-
-.containerDH {
-	display: flex;
-	height: 100%;
-	align-items: center;
-}
-
-.containerDH img {
-	height: 40px;
-}
- 
 
 .navBarDerecho {
 	display: flex;
@@ -230,34 +167,41 @@ footer {
 	justify-content: space-around;
 	align-items: center;
 	height: 8vh;
-	background-color: rgb(236, 236, 235);
+	background-color: rgb(224, 224, 224);
+	box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.3);
 	
 }
 
-.fondoNormal{
-	animation: aclarar 1.5s forwards 
+
+
+
+
+
+
+
+/* .fuenteNormal{
+	animation: aclarar 1.8s ease-in-out 0s 1 forwards 
 
 }
 
 
 @keyframes aclarar{	
 	from{
-		background-color: #202428;
+		color: rgb(232, 232, 232);		
 	}to{		
-		background-color: rgb(232, 232, 232);		
+		color: #202428;
 	}
-}
+} */
 
-
+/* TRANSICION DE CLARO A OSCURO */
 
 
 .dark{
 	width: 100%;
 	animation: oscurecer 0.8s forwards 
-	
 }
 	
-	
+
 
 @keyframes oscurecer{	
 	from{
@@ -268,26 +212,66 @@ footer {
 }
 
 
+/* TRANSICION DE CLARO A OSCURO DE LAS FUENTES */
 
-
+/* --------------------------------------------------------------------------- */
 .darkFont{
-	color: white;
-	/* animation: oscurecer 1.5s forwards  */
+	animation: oscurecerFuentes 0.8s ease-in-out 0.1s 1 forwards 
+}
+.lightFont{
+	animation: aclararFuentes 0.8s ease-in-out 0.1s 1 forwards 
 }
 
-.darkIco{
+@keyframes oscurecerFuentes{	
+	from{
+		color: black;
+		/* background-color: #737373; */
+	}to{		
+		color: rgb(232, 232, 232);		
+	}
+}
+@keyframes aclararFuentes{	
+	from{
+		color: rgb(232, 232, 232);		
+		/* background-color: #737373; */
+	}to{		
+		color: black;
+	}
+}
+
+
+
+
+.darkIco, .iconoOscuro{
 	filter: invert(1);
 }
 
+.botonOscuro{
+	background-color: #202428;
+}
+
+/* ------------------------------------------------------------------- */
 .darkBack{
 	width: 100%;
-	animation: oscurecerFondo 0.8s ease-in-out 0.5s 1 forwards;
+	animation: oscurecerFondo 0.8s ease-in-out 0.1s 1 forwards;
+}
+.lightBack{
+	width: 100%;
+	animation: aclararFondo 1.8s ease-in-out 0.1s 1 forwards;
 }
 
 @keyframes oscurecerFondo{	
 	from{
-		background-color: rgb(232, 232, 232);		
+		/* background-color: rgb(232, 232, 232);		 */
+		background-color: rgb(210, 230, 226);		
 	}to{		
-		background-color: #737373;
+		background-color: #2a5966;
+	}
+}
+@keyframes aclararFondo{	
+	from{
+		background-color: #2a5966;
+	}to{		
+		background-color: rgb(210, 230, 226);		
 	}
 }

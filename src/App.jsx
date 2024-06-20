@@ -13,7 +13,7 @@ function App() {
 	const {state} = useContextGlobalDentist()
 	const tema = state.theme 
 	return (
-		<div className={`App ${tema==="dark"? "darkBack": ""}`}>
+		<div className={`App ${tema==="dark"? "darkBack": "lightBack"}`}>
 			<Navbar />
 			<Routes>
 				<Route path={routes.Home} element={<Home />} />

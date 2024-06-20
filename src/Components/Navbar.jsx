@@ -7,26 +7,25 @@ import { useContextGlobalDentist } from "../Context/Context";
 const Navbar = () => {
 
 const {state, dispatch} = useContextGlobalDentist()
-console.log(state.theme);
 const tema = state.theme;
-
 
   return (
     <>
       <nav >
-        <div className={`normal ${tema}`}>
-          <div className={`navBarIzquierdo ${tema==="dark"? "darkFont": "fondoNormal"}`} ><span style={{color:"Red"}}>D</span>H Odonto</div>
+        <div className={`normal ${tema==="dark"? "dark":""}`}>
+        {/* <div className={`normal ${tema}`}> */}
+          <div className={`navBarIzquierdo ${tema==="dark"? "darkFont": "lightFont"}`} ><span style={{color:"Red"}}>D</span>H Odonto</div>
           <div className="navBarDerecho darkFont">
             <div className="container-fluid darkFont">
               <ul className="navbar-nav darkFont">
                 <li>
-                  <Link to={routes.Home} className={tema==="dark"? "darkFont": ""}>Home</Link>
+                  <Link to={routes.Home} className={tema==="dark"? "darkFont": "lightFont"}>Home</Link>
                 </li>
                 <li>
-                  <Link to={routes.Favs} className={tema==="dark"? "darkFont": ""}>Favs</Link>
+                  <Link to={routes.Favs} className={tema==="dark"? "darkFont": "lightFont"}>Favs</Link>
                 </li>
                 <li>
-                  <Link to={routes.Contact} className={tema==="dark"? "darkFont": ""}>Contact</Link>
+                  <Link to={routes.Contact} className={tema==="dark"? "darkFont": "lightFont"}>Contact</Link>
                 </li>
               </ul>
             </div>

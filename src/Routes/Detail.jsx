@@ -1,13 +1,15 @@
-// import React from 'react'
-
 import { useParams } from "react-router-dom";
-import { useContextGlobalDentist } from "../Context/Context";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Tabla from "../Styles/Table.module.css";
+import { useContextGlobalDentist } from "../Context/Context";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Detail = () => {
+	const { state } = useContextGlobalDentist()
+	const tema = state.theme
+
 	// Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
 
 	const { id } = useParams();
@@ -17,16 +19,16 @@ const Detail = () => {
 	useEffect(() => {
 		axios(url)
 			.then(res => setDentist(res.data))
-			.catch(err => console.log(err));
+			.catch(err => alert(err));
 	}, []);
 
 	return (
 		<>
-			<h1>Detail Dentist id </h1>
+			<h1 className={tema==="dark"? "darkFont":"lightFont"}>Detail Dentist id </h1>
 			{!dentist ? (
 				<h2>No se encuentran dentistas</h2>
 			) : (
-				<table>
+				<table >
 					<thead>
 						<tr>
 							<th>Name</th>

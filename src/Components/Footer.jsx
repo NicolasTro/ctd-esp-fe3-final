@@ -1,21 +1,22 @@
 import React from "react";
+import footer from "../Styles/Footer.module.css"
 
 const Footer = () => {
   return (
     <footer>
-      <div className="footerConteiner">
-        <div className="footerUp">
-          <div className="divisionFooter"></div>
+      <div className={footer.footerConteiner}>
+        <div className={footer.footerUp}>
+          <div className={footer.divisionFooter}></div>
         </div>
 
-        <div className="footerDown">
-          <div className="containerDH">
+        <div className={footer.footerDown}>
+          <div className={footer.containerDH}>
             <p>Powered by</p>
 
             <img src="/assets/images/DH.png" alt="DH-logo" />
           </div>
 
-          <div className="containerRedesSociales">
+          <div className={footer.containerRedesSociales}>
             <img src="/assets/images/ico-facebook.png" alt="DH-logo" />
             <img src="/assets/images/ico-instagram.png" alt="DH-logo" />
             <img src="/assets/images/ico-whatsapp.png" alt="DH-logo" />
