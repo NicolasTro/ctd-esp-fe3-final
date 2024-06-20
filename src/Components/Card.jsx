@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useContextGlobalDentist } from "../Context/Context";
 
 const Card = ({ dentista }) => {
-  console.log(dentista);
 const{name, username, id} = dentista
   //Llamo al useContextGlobal
   const { state, dispatch } = useContextGlobalDentist();
