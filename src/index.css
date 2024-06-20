@@ -246,3 +246,24 @@ tr:nth-child(even) {
 .algo{
 	border: solid black 3px;
 }
+
+table,
+tr,
+tbody,
+td, th {
+    border: solid black 2px;
+}
+thead {
+    background-color: rgba(10, 20, 73, 0.798);
+}
+
+tbody {
+
+    background-color: rgba(127, 139, 201, 0.798);
+}
+
+tbody,
+thead {
+
+    color: white
+}
